@@ -57,8 +57,10 @@ const Form: React.FC = () => {
     event.preventDefault();
     if (isCardNumberValid) {
       localStorage.setItem("cardNumber", JSON.stringify(cardNumber));
+      const corsAnyWhere = "https://cors-anywhere.herokuapp.com/";
       const response = await axios.get(
-        "https://mtp.indianrailways.gov.in/KolkataMetroPG/CardBalanceAction.jsp",
+        corsAnyWhere +
+          "https://mtp.indianrailways.gov.in/KolkataMetroPG/CardBalanceAction.jsp",
         {
           params: { cardNumber: cardNumber, reCardNumber: cardNumber },
         }
@@ -103,9 +105,9 @@ const Form: React.FC = () => {
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
             <Heading fontSize={"4xl"}>
-              See Your {" "}
+              See Your{" "}
               <Text as={"span"} color={"green.400"}>
-                 Balance
+                Balance
               </Text>
             </Heading>
           </Stack>
