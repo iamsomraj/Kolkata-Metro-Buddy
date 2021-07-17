@@ -1,5 +1,6 @@
 import {
-  Button, Modal,
+  Button,
+  Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
@@ -18,7 +19,7 @@ import {
   Tfoot,
   Th,
   Thead,
-  Tr
+  Tr,
 } from "@chakra-ui/react";
 import React from "react";
 import { ResponseType } from "../Form/Form";
@@ -42,7 +43,7 @@ const Card: React.FC<CardProps> = (props) => {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Card {props.cardNumber}</ModalHeader>
+          <ModalHeader>Card # {props.cardNumber}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             {!props.response && <Spinner />}
