@@ -135,7 +135,7 @@ const Form: React.FC = () => {
               <Stack spacing={10}>
                 <Button
                   type="submit"
-                  disabled={!isCardNumberValid}
+                  disabled={!isCardNumberValid || isLoading}
                   onClick={submitHandler}
                   bg={"blue.400"}
                   color={"white"}
