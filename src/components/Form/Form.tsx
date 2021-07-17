@@ -7,6 +7,7 @@ import {
   FormLabel,
   Heading,
   Input,
+  Spinner,
   Stack,
   Text,
   useColorModeValue,
@@ -41,6 +42,7 @@ const Form: React.FC = () => {
   );
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onModalCloseHandler: React.MouseEventHandler<HTMLButtonElement> =
     () => {
@@ -57,6 +59,7 @@ const Form: React.FC = () => {
     event.preventDefault();
     if (isCardNumberValid) {
       localStorage.setItem("cardNumber", JSON.stringify(cardNumber));
+      setIsLoading(true);
       const corsAnyWhere = "https://cors-anywhere.herokuapp.com/";
       const response = await axios.get(
         corsAnyWhere +
@@ -67,6 +70,7 @@ const Form: React.FC = () => {
       );
       setBalanceResponse(response.data);
       setIsOpen(true);
+      setIsLoading(false);
     }
   };
 
@@ -139,7 +143,7 @@ const Form: React.FC = () => {
                     bg: "blue.500",
                   }}
                 >
-                  Check Balance
+                  {isLoading ? <Spinner /> : "Check Balance"}
                 </Button>
               </Stack>
             </Stack>
