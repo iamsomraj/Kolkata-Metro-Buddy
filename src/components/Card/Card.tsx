@@ -1,4 +1,6 @@
 import {
+  Alert,
+  AlertIcon,
   Button,
   Modal,
   ModalBody,
@@ -7,7 +9,6 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Spinner,
   Stat,
   StatHelpText,
   StatLabel,
@@ -46,7 +47,6 @@ const Card: React.FC<CardProps> = (props) => {
           <ModalHeader>Card # {props.cardNumber}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            {!props.response && <Spinner />}
             {props.response && (
               <>
                 <Stat align={"center"} justify={"center"}>
@@ -86,6 +86,11 @@ const Card: React.FC<CardProps> = (props) => {
                     </Tr>
                   </Tfoot>
                 </Table>
+                <Alert status="warning">
+                  <AlertIcon />
+                  Current card information may vary. Please check at station for
+                  latest information.
+                </Alert>
               </>
             )}
           </ModalBody>

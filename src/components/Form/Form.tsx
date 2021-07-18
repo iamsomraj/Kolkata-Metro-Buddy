@@ -40,17 +40,16 @@ const Form: React.FC = () => {
   const [balanceResponse, setBalanceResponse] = useState<null | ResponseType>(
     null
   );
-
-  const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const onModalCloseHandler: React.MouseEventHandler<HTMLButtonElement> =
     () => {
-      onClose();
+      closeModal();
     };
 
-  const onClose = () => {
-    setIsOpen(false);
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   const submitHandler: React.MouseEventHandler<HTMLButtonElement> = async (
@@ -69,7 +68,7 @@ const Form: React.FC = () => {
         }
       );
       setBalanceResponse(response.data);
-      setIsOpen(true);
+      setIsModalOpen(true);
       setIsLoading(false);
     }
   };
@@ -152,9 +151,9 @@ const Form: React.FC = () => {
       </Flex>
       {balanceResponse && (
         <Card
-          isOpen={isOpen}
+          isOpen={isModalOpen}
           onModalClose={onModalCloseHandler}
-          onClose={onClose}
+          onClose={closeModal}
           cardNumber={cardNumber}
           response={balanceResponse}
         />
