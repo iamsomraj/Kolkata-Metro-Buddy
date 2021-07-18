@@ -60,7 +60,7 @@ const Form: React.FC = () => {
     if (isCardNumberValid) {
       localStorage.setItem("cardNumber", JSON.stringify(cardNumber));
       setIsLoading(true);
-      const corsAnyWhere = "https://cors-anywhere.herokuapp.com/";
+      const corsAnyWhere = "https://somrajproxy.herokuapp.com/";
       const response = await axios.get(
         corsAnyWhere +
           "https://mtp.indianrailways.gov.in/KolkataMetroPG/CardBalanceAction.jsp",
