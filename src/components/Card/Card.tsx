@@ -106,32 +106,3 @@ const Card: React.FC<CardProps> = (props) => {
 };
 
 export default Card;
-
-// <Stat>
-//                   <StatLabel>Balance</StatLabel>
-//                   <StatNumber>₹ {props.response.balance.toFixed(2)}</StatNumber>
-//                 </Stat>
-//                 <Stat>
-//                   <StatLabel>Starting Location</StatLabel>
-//                   <StatNumber>
-//                     {props.response.startLocation.trim().toLowerCase()}
-//                   </StatNumber>
-//                 </Stat>
-//                 <Stat>
-//                   <StatLabel>Ending Location</StatLabel>
-//                   <StatNumber>
-//                     {props.response.endLocation.trim().toLowerCase()}
-//                   </StatNumber>
-//                 </Stat>
-//                 <Stat>
-//                   <StatLabel>Last Used In Station</StatLabel>
-//                   <StatNumber>{props.response.lastUsedInGateAtStn}</StatNumber>
-//                 </Stat>
-//                 <Stat>
-//                   <StatLabel>Validity</StatLabel>
-//                   <StatNumber>{props.response.validUpto}</StatNumber>
-//                 </Stat>
-//                 <Stat>
-//                   <StatLabel>Balance</StatLabel>
-//                   <StatNumber>{props.response.balance}</StatNumber>
-//                 </Stat>
