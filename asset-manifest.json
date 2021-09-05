@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/Kolkata-Metro-Buddy/static/js/main.1313a62b.chunk.js",
-    "main.js.map": "/Kolkata-Metro-Buddy/static/js/main.1313a62b.chunk.js.map",
+    "main.js": "/Kolkata-Metro-Buddy/static/js/main.3975ab76.chunk.js",
+    "main.js.map": "/Kolkata-Metro-Buddy/static/js/main.3975ab76.chunk.js.map",
     "runtime-main.js": "/Kolkata-Metro-Buddy/static/js/runtime-main.09bfa9b3.js",
     "runtime-main.js.map": "/Kolkata-Metro-Buddy/static/js/runtime-main.09bfa9b3.js.map",
     "static/js/2.37269c4e.chunk.js": "/Kolkata-Metro-Buddy/static/js/2.37269c4e.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.09bfa9b3.js",
     "static/js/2.37269c4e.chunk.js",
-    "static/js/main.1313a62b.chunk.js"
+    "static/js/main.3975ab76.chunk.js"
   ]
 }
