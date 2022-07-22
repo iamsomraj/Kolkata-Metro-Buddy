@@ -1,4 +1,4 @@
-# Kolkata Metro Buddy
+# [ ARCHIVED ] Kolkata Metro Buddy
 
 Kolkata Metro Buddy is a simple web application for checking Kolkata Metro Smart Card Balance. The best part of this application is that you do not have to remember your card number. Once you have entered your card number, it saves the card number on local storage.
 
